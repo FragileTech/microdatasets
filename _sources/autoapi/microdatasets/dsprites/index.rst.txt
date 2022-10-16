@@ -1,0 +1,114 @@
+:py:mod:`microdatasets.dsprites`
+================================
+
+.. py:module:: microdatasets.dsprites
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   dsprites/index.rst
+   shape_generator/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   microdatasets.dsprites.DSprites
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   microdatasets.dsprites.resize_frame
+
+
+
+.. py:class:: DSprites(file=DEFAULT_DATA_FILE)
+
+   .. py:attribute:: DEFAULT_DATA_FILE
+      
+
+      
+
+   .. py:method:: show_images_grid(imgs_, num_images=25)
+      :staticmethod:
+
+
+   .. py:method:: show_density(imgs)
+      :staticmethod:
+
+
+   .. py:method:: resize_frame(frame, width, height, mode = 'L')
+      :staticmethod:
+
+      Use PIL to resize an RGB frame to an specified height and width.
+
+      :param frame: Target numpy array representing the image that will be resized.
+      :param width: Width of the resized image.
+      :param height: Height of the resized image.
+      :param mode: Passed to Image.convert.
+
+      :returns: The resized frame that matches the provided width and height.
+
+
+   .. py:method:: decode_keys(dict_)
+      :classmethod:
+
+
+   .. py:method:: load_dataset(file)
+
+
+   .. py:method:: latent_to_index(latents)
+
+
+   .. py:method:: sample_latent(size, n_shapes=None, only_big_scales=True)
+
+
+   .. py:method:: sample_examples(n_examples, n_shapes=None, width=40, height=40)
+
+
+   .. py:method:: latents_to_img(latents)
+
+
+   .. py:method:: sample_dataset(n_examples, shapes_per_image=1, allow_overlap=True, n_shapes=None, width=40, height=40)
+
+
+   .. py:method:: swap_pixels(imgs, prob)
+      :staticmethod:
+
+      Swap pixel values for an example with target probability.
+
+      :param imgs: target image for swapping its pixel values.
+      :type imgs: np.ndarray
+      :param prob: probability of swapping a each pixel value of the image
+      :type prob: float
+
+      :returns: Images with its pixels swapped.
+      :rtype: np.ndarray
+
+
+
+.. py:function:: resize_frame(frame, width, height, mode = 'L')
+
+   Use PIL to resize an RGB frame to an specified height and width.
+
+   :param frame: Target numpy array representing the image that will be resized.
+   :param width: Width of the resized image.
+   :param height: Height of the resized image.
+   :param mode: Passed to Image.convert.
+
+   :returns: The resized frame that matches the provided width and height.
+
+

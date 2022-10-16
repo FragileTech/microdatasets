@@ -1,0 +1,67 @@
+:py:mod:`microdatasets.dsprites.shape_generator`
+================================================
+
+.. py:module:: microdatasets.dsprites.shape_generator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   microdatasets.dsprites.shape_generator.ShapeGenerator
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   microdatasets.dsprites.shape_generator.two_triangle_shape
+   microdatasets.dsprites.shape_generator.one_triangle
+
+
+
+.. py:function:: two_triangle_shape()
+
+
+.. py:function:: one_triangle()
+
+
+.. py:class:: ShapeGenerator
+
+   .. py:attribute:: SHAPES
+      
+
+      
+
+   .. py:attribute:: SCALES
+      
+
+      
+
+   .. py:attribute:: ANGLES
+      
+
+      
+
+   .. py:method:: rotate_shape(shape, degs)
+      :staticmethod:
+
+
+   .. py:method:: resize_shape(shape, size)
+      :staticmethod:
+
+
+   .. py:method:: place_shape(shape, x, y)
+      :staticmethod:
+
+
+   .. py:method:: latent_to_image(latent)
+
+
+

@@ -4,6 +4,15 @@
 .. py:module:: microdatasets
 
 
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   dsprites/index.rst
+
+
 Submodules
 ----------
 .. toctree::
@@ -13,4 +22,12 @@ Submodules
    __main__/index.rst
    version/index.rst
 
+
+Package Contents
+----------------
+
+.. py:data:: ASSETS_PATH
+   
+
+   
 
