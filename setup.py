@@ -29,7 +29,7 @@ setup(
     test_suite="tests",
     tests_require=["pytest>=5.3.5", "hypothesis>=5.6.0"],
     extras_require={},
-    install_requires=["matplotlib", "numpy"],
+    install_requires=["matplotlib", "numpy", "scipy"],
     package_data={
         "": ["README.md"],
         "microdatasets": ["assets/**/*", "assets/**/.*", "tests/**/*", "tests/**/.*"],

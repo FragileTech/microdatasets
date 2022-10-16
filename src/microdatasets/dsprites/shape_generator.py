@@ -1,6 +1,7 @@
-from dsprites import resize_frame
 import numpy as np
 from scipy import ndimage
+
+from microdatasets.dsprites import resize_frame
 
 
 def two_triangle_shape():

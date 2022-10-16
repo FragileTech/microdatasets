@@ -33,9 +33,10 @@ generate-setup-file = false
 
 # Requirements
 [tool.poetry.dependencies]
-python = "^3.8"
-numpy = "^1.23.4"
-matplotlib = "^3.6.0"
+python = "^3.7"
+numpy = "^1.21"
+scipy = "^1.7"
+matplotlib = "^3.5"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.1"
