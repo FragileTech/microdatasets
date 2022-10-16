@@ -16,7 +16,7 @@ check:
 	!(grep -R /tmp tests)
 	flakehell lint src/${PROJECT}
 	pylint src/${PROJECT}
-	black --check src/${PROJECT}
+	black --check src/${PROJECT} notebooks
 
 .PHONY: test
 test:
@@ -26,7 +26,7 @@ test:
 .PHONY: test-codecov
 test-codecov:
 	find -name "*.pyc" -delete
-	pytest -n $n -s -o log_cli=true -o log_cli_level=info --cov=./ --cov-report=xml --cov-config=pyproject.toml
+	pytest -n $n -s -o log_cli=true -o log_cli_level=info --cov=./src --cov-report=xml --cov-config=pyproject.toml
 
 .PHONY: docker-shell
 docker-shell:

@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "microdatasets"
-version = "0.0.0"
+version = "0.0.1"
 description = "Simple datasets for evaluating DL algorithms."
 authors = [
     "Guillem Duran Ballester",
@@ -29,11 +29,13 @@ classifiers = [
 ]
 
 [tool.poetry.build]
-generate-setup-file = true
+generate-setup-file = false
 
 # Requirements
 [tool.poetry.dependencies]
 python = "^3.8"
+numpy = "^1.23.4"
+matplotlib = "^3.6.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.1"
@@ -42,6 +44,22 @@ psutil= "^5.8"
 pytest-xdist = "^2.5"
 pre-commit = "^2.6"
 pytest-rerunfailures= "^10.2"
+
+[tool.poetry.group.lint.dependencies]
+colorama = "^0.4"
+flake8 = "^3.9"
+flake8-bugbear = "^21.9"
+flake8-docstrings = "^1.6"
+flake8-import-order = "^0.18"
+flake8-quotes = "^3.3"
+flake8-commas = "^2.1"
+isort = "^5.10"
+pylint = "^2.11"
+pydocstyle = "^6.1"
+pycodestyle = "^2.7"
+flakehell = "^0.9"
+black = "^22.8"
+pre-commit = "^2.15"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -66,7 +84,7 @@ include = '\.pyi?$'
 exclude = '''
 /(
     \.eggs
-  | \.git
+  | \.gitclea
   | \.hg
   | \.mypy_cache
   | \.tox
@@ -77,7 +95,8 @@ exclude = '''
   | dist
   | venv
 )/
-'''# isort orders and lints imports
+'''
+# isort orders and lints imports
 [tool.isort]
 profile = "black"
 line_length = 99
@@ -108,10 +127,10 @@ application_import_names = ["microdatasets"]
 extended_default_ignore=[]
 
 [tool.flakehell.plugins]
-"flake8*" = ["+*"]
-pylint = ["+*"]
-pyflakes = ["+*"]
-pycodestyle = ["+*" , "-D100", "-D104", "-D301", "-W503", "-W504"]
+"flake8*" = ["+*", "-D*"]
+pylint = ["+*", "-D*"]
+pyflakes = ["+*", "-D*"]
+pycodestyle = ["+*" , "-D*", "-D100", "-D104", "-D301", "-W503", "-W504", "-E203"]
 
 [tool.flakehell.exceptions."**/__init__.py"]
 pyflakes = ["-F401"]
