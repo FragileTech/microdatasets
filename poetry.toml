@@ -1,0 +1,6 @@
+[virtualenvs]
+create = false
+prefer-active-python = true
+
+[virtualenvs.options]
+system-site-packages = false
