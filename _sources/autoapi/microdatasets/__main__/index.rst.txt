@@ -1,0 +1,29 @@
+:py:mod:`microdatasets.__main__`
+================================
+
+.. py:module:: microdatasets.__main__
+
+.. autoapi-nested-parse::
+
+   {{ project.project_name }} entry point.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   microdatasets.__main__.main
+
+
+
+.. py:function:: main()
+
+   Do nothing and always return 0.
+
+

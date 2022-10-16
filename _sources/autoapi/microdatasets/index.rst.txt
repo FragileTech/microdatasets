@@ -1,0 +1,16 @@
+:py:mod:`microdatasets`
+=======================
+
+.. py:module:: microdatasets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   __main__/index.rst
+   version/index.rst
+
+
