@@ -1,0 +1,118 @@
+globals:
+  project_name: microdatasets
+  default_branch: main
+  owner: FragileTech
+  author: Guillem Duran Ballester
+  email: guillem@fragile.tech
+  description: Simple datasets for evaluating DL algorithms.
+  open_source: true
+  project_url: https://github.com/FragileTech/microdatasets
+  license: MIT
+  use_poetry: true
+  main_python_version: '3.8'
+license:
+  disable: false
+  license: MIT
+  copyright_year: 2022
+  copyright_holder: ${globals.owner}
+  project_name: ${globals.project_name}
+  email: ${globals.email}
+  project_url: ${globals.project_url}
+project:
+  disable: false
+  license: ${license.license}
+  project_name: ${globals.project_name}
+  owner: ${globals.owner}
+  description: ${globals.description}
+  project_url: ${globals.project_url}
+  tests: true
+docs:
+  disable: false
+  project_name: ${globals.project_name}
+  description: ${globals.description}
+  author: ${globals.author}
+  copyright_holder: ${license.copyright_holder}
+  copyright_year: ${license.copyright_year}
+  default_branch: ${globals.default_branch}
+  project_url: ${globals.project_url}
+  deploy_docs: true
+git:
+  disable: true
+  git_init: false
+  git_push: false
+  git_message: Generate project files with mloq
+  default_branch: ${globals.default_branch}
+  project_url: ${globals.project_url}
+package:
+  disable: false
+  project_name: ${globals.project_name}
+  description: ${globals.description}
+  default_branch: ${globals.default_branch}
+  project_url: ${globals.project_url}
+  owner: ${globals.owner}
+  author: ${globals.author}
+  email: ${globals.email}
+  license: ${globals.license}
+  use_poetry: ${globals.use_poetry}
+  main_python_version: ${globals.main_python_version}
+  python_versions:
+  - '3.7'
+  - '3.8'
+  - '3.9'
+  - '3.10'
+  pyproject_extra: ''
+  license_classifier: 'License :: OSI Approved :: MIT License'
+requirements:
+  disable: true
+  requirements:
+  - dogfood
+lint:
+  disable: false
+  black: true
+  isort: true
+  linters: true
+  poetry_requirements: true
+  docstring_checks: true
+  pyproject_extra: '[tool.flakehell.exceptions."**/assets/*"]
+
+    pycodestyle = ["-*"]
+
+    pyflakes = ["-*"]
+
+    "flake8*" = ["-*"]'
+  project_name: ${globals.project_name}
+  makefile: true
+docker:
+  disable: true
+  cuda: ???
+  cuda_image_type: cudnn8-runtime
+  cuda_version: '11.2'
+  python_version: '3.8'
+  ubuntu_version: '20.04'
+  base_image: ???
+  test: true
+  lint: true
+  jupyter: true
+  jupyter_password: ${globals.project_name}
+  project_name: ${globals.project_name}
+  docker_org: fragiletech
+  requirements: ${requirements.requirements}
+  makefile: true
+  extra: ''
+ci:
+  bot_name: fragile-bot
+  bot_email: bot@fragile.tech
+  disable: false
+  vendor: github
+  ci_python_version: '3.8'
+  ubuntu_version: ubuntu-20.04
+  open_source: ${globals.open_source}
+  project_name: ${globals.project_name}
+  default_branch: ${globals.default_branch}
+  owner: ${globals.owner}
+  author: ${globals.author}
+  email: ${globals.email}
+  project_url: ${globals.project_url}
+  docker_org: fragiletech
+  docker: false
+  python_versions: ${package.python_versions}
